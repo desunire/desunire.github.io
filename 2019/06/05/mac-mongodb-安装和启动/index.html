@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="desunire">
 <meta property="og:description" content="1：先去官网下载你需要下载的安装包版本，官网地址：https://www.mongodb.com/download-center/community2：下载解压后放到你自定义的目录下如：/usr/local/mongodb3: 设置环境变量到 /.bash_profile 方式1是命令行 echo ‘export PATH=/usr/local/mongodb/bin:$PATH’&amp;gt;&amp;gt;">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-06-05T04:03:15.169Z">
+<meta property="og:updated_time" content="2019-06-05T04:09:48.748Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mac mongodb 安装和启动">
 <meta name="twitter:description" content="1：先去官网下载你需要下载的安装包版本，官网地址：https://www.mongodb.com/download-center/community2：下载解压后放到你自定义的目录下如：/usr/local/mongodb3: 设置环境变量到 /.bash_profile 方式1是命令行 echo ‘export PATH=/usr/local/mongodb/bin:$PATH’&amp;gt;&amp;gt;">
@@ -166,7 +166,7 @@
       
         <p>1：先去官网下载你需要下载的安装包版本，官网地址：<a href="https://www.mongodb.com/download-center/community" target="_blank" rel="noopener">https://www.mongodb.com/download-center/community</a><br>2：下载解压后放到你自定义的目录下如：/usr/local/mongodb<br>3: 设置环境变量到 /.bash_profile 方式1是命令行 echo ‘export PATH=/usr/local/mongodb/bin:$PATH’&gt;&gt;~/.bash_profile<br>   方式2 vim ~/.bash_profile<br>4:查看你设置的环境变量 echo $PATH 我这边的是：<br>/Users/zealcommuser/Documents/zealcomm_project/4.xsdk_design/depot_tools:/usr/local/mongodb/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Wireshark.app/Contents/MacOS</p>
 <p>5:为了方便数据库管理和日志管理 建议在/usr/local/mongodb 目录下新建data 然后在data下新建db和logs文件，logs文件夹下新建mongo.log文件</p>
-<p>6：启动方式<br>./mongod –dbpath=/usr/local/mongodb/data/db –logpath=/usr/local/mongodb/data/logs/mongo.log -force<br>或者mongod –dbpath=/usr/local/mongodb/data/db –logpath=/usr/local/mongodb/data/logs/mongo.log -force（设置环境变量后）</p>
+<p>6：启动方式<br>./mongod –dbpath=/usr/local/mongodb/data/db –logpath=/usr/local/mongodb/data/logs/mongo.log<br>或者mongod –dbpath=/usr/local/mongodb/data/db –logpath=/usr/local/mongodb/data/logs/mongo.log（设置环境变量后）</p>
 <p>7：执行sql mongo</p>
 <p>8：关闭服务<br>A:ctrl+a  // lsof -i tcp:27017 + kill -9 pid + ps -ef |grep mongo<br>B:另启动一个终端 mongo-&gt;use admin-&gt;db.shutdownServer()</p>
 <p>9：还可以使用brew install mongodb的方式</p>
